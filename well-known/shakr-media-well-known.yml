@@ -1,0 +1,21 @@
+generated: '2026-07-21'
+method: searched
+host: https://api.shakr.com
+note: >-
+  Live probes of the Shakr API host. The host redirects (301/308) all
+  /.well-known/ paths rather than serving discovery documents, so no well-known
+  document was captured. Absence is valid recorded data.
+documents:
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/openid-configuration
+    status: 308
+  - path: /.well-known/oauth-authorization-server
+    status: 308
+  - path: /.well-known/api-catalog
+    status: 308
+  - path: /.well-known/ai-plugin.json
+    status: 301
+also_probed:
+  host: https://shakr.com
+  note: shakr.com/.well-known/security.txt returned 400 (Cloudflare); no security.txt served.

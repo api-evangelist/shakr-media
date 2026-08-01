@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.shakr.com/docs/editor-sdk/introduction/
+docs: https://developers.shakr.com/docs/sdk/introduction/
+families:
+  - name: Shakr Video Editor SDK
+    kind: embeddable-editor
+    description: >-
+      A white-labeled, drag-and-drop video editing experience embedded directly
+      inside a host web application. Instantiated with createShakrEditor(); it
+      renders Shakr's video editor UI bound to a RenderSession and scoped access
+      token, and emits lifecycle events back to the host page.
+    loader:
+      npm: "@shakrmedia/editor-sdk"
+      cdn_script: true
+      entrypoints: [loadEditorSDK, createShakrEditor]
+    instance_api: [ShakrEditor.launch, ShakrEditor.close, ShakrEditor.setImage, ShakrEditor.is_open, ShakrEditor.render_session_id]
+    events:
+      - init
+      - load
+      - finish
+      - closed
+      - confirm_close
+      - error
+      - get_media
+      - open_media_library
+    options:
+      - access_token
+      - render_session_id
+      - show_id
+      - image
+      - language
+      - theme
+      - media_libraries
+      - customizability
+    features:
+      - branding (white-label appearance)
+      - custom media library (with/without custom UI)
+    demo: https://github.com/shakrmedia/editor-sdk-demo
+notes: >-
+  Distinct from a server-side SDK: this is a client-side embeddable UI component
+  that launches Shakr's hosted editor surface inside the customer's product.

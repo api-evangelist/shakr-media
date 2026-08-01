@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: https://developers.shakr.com/api/
+note: >-
+  No official hosted/remote MCP server is published by Shakr. This is a CANDIDATE
+  tool list derived from the documented Shakr Video API operations, to seed a
+  future MCP server. Tools map 1:1 to published API-reference operations.
+server:
+  name: shakr
+  transport: http
+tools:
+  - name: retrieve_access_token
+    description: Exchange client_id/client_secret (client_credentials) for a scoped access token.
+    source_operation: docs/api/retrieve-an-access-token
+  - name: create_template_style_version
+    description: Create a template style version (creative template).
+    source_operation: docs/api/create-a-template-style-version
+  - name: retrieve_template_style_version
+    description: Retrieve a template style version.
+    source_operation: docs/api/retrieve-a-template-style-version
+  - name: retrieve_template_style_version_editable_spec
+    description: Retrieve a template style version's editable spec.
+    source_operation: docs/api/retrieve-a-template-style-versions-editable-spec
+  - name: create_mapping
+    description: Create a mapping of input values onto a template's editable spec.
+    source_operation: docs/api/create-a-mapping
+  - name: retrieve_mapping
+    description: Retrieve a mapping.
+    source_operation: docs/api/retrieve-a-mapping
+  - name: update_mapping
+    description: Update a mapping.
+    source_operation: docs/api/update-a-mapping
+  - name: create_render_session
+    description: Create a render session to produce a video from a mapping.
+    source_operation: docs/api/create-a-render-session
+  - name: retrieve_render_session
+    description: Retrieve a render session (status / result).
+    source_operation: docs/api/retrieve-a-render-session

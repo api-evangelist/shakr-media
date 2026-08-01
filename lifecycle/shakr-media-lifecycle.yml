@@ -1,0 +1,20 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.shakr.com/docs/api/introduction/
+versioning:
+  scheme: uri-path
+  current: v2
+  base_url: https://api.shakr.com/v2/
+  docs: https://developers.shakr.com/docs/api/introduction/
+deprecation:
+  policy_documented: false
+  sunset_header: unknown
+  note: No public deprecation/Sunset (RFC 8594) policy is documented.
+sla:
+  documented: false
+status_page:
+  present: false
+  note: >-
+    status.shakr.com resolves but 308-redirects to https://www.shakr.com/ — it is
+    not a live status/uptime page.
+deprecated_operations: []

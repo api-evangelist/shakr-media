@@ -1,0 +1,33 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.npmjs.com/package/@shakrmedia/editor-sdk
+packages:
+  - language: javascript
+    registry: npm
+    name: "@shakrmedia/editor-sdk"
+    version: 0.7.0
+    url: https://www.npmjs.com/package/@shakrmedia/editor-sdk
+    install: npm install @shakrmedia/editor-sdk
+    homepage: https://developers.shakr.com
+    description: Shakr Video Editor SDK — embed a white-labeled drag-and-drop video editor.
+    official: true
+  - language: javascript
+    registry: cdn
+    name: "@shakrmedia/editor-sdk (script tag)"
+    url: https://developers.shakr.com/docs/editor-sdk/installation/
+    install: "<script src=\"https://.../editor-sdk...\"></script>"
+    description: Browser <script>-tag distribution of the Editor SDK (loadEditorSDK / createShakrEditor).
+    official: true
+  - language: ruby
+    registry: github
+    name: facebookbusiness-shakr
+    url: https://github.com/shakrmedia/facebookbusiness-shakr
+    description: Shakr's SDK to facilitate application development for the Facebook Business/Marketing API (used for Facebook Ad Account video delivery).
+    official: true
+notes: >-
+  @shakrmedia/editor-sdk is the marquee first-party client library (TypeScript,
+  npm + CDN). Shakr also publishes petal (CSS UI framework) and tuesday (CSS
+  animation library) on npm/GitHub, but those are general front-end libraries,
+  not Shakr Video API clients. No first-party REST API server SDK (Python, Go,
+  etc.) is published; the docs recommend generic OAuth2 client-credentials
+  libraries for token retrieval.

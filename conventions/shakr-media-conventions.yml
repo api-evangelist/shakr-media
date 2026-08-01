@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.shakr.com/docs/api/introduction/
+docs: https://developers.shakr.com/docs/api/introduction/
+api: Shakr Video API
+base_url: https://api.shakr.com/v2/
+authentication:
+  style: oauth2-client-credentials + bearer
+  header: "Authorization: Bearer <ACCESS_TOKEN>"
+  ref: authentication/shakr-media-authentication.yml
+content_type:
+  request: application/json
+  note: Almost all requests must include Content-Type application/json.
+versioning:
+  scheme: uri-path
+  current: v2
+  location: base URL path (https://api.shakr.com/v2/)
+pagination:
+  documented: false
+  note: No pagination convention is published in the developer docs.
+idempotency:
+  documented: false
+  note: No idempotency-key header/contract is documented by Shakr.
+webhooks:
+  documented: true
+  method: POST
+  registration: Manual — contact Shakr customer success to register your endpoint.
+  payload_fields: [render_session_id, to, remote_id]
+  ref: asyncapi/shakr-media-webhooks.yml
+error_envelope:
+  documented: false
+  note: >-
+    The REST API does not publish a structured error-envelope schema. The Editor
+    SDK surfaces errors as ShakrEditorError events (see SDK reference).
+rate_limit_signal:
+  documented: false
+resources: [Mapping, RenderSession, TemplateStyleVersion]
+cross_links:
+  authentication: authentication/shakr-media-authentication.yml
+  scopes: scopes/shakr-media-scopes.yml
+  webhooks: asyncapi/shakr-media-webhooks.yml
+  data_model: data-model/shakr-media-data-model.yml

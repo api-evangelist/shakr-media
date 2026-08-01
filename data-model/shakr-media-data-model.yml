@@ -1,0 +1,53 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.shakr.com/api/
+docs: https://developers.shakr.com/docs/general/terminology/
+api: Shakr Video API (v2)
+entities:
+  - name: TemplateStyleVersion
+    description: >-
+      A versioned creative template style. Defines the editable specification
+      (which text/color, image, video, audio, font elements a video exposes for
+      editing). The root creative object a video is produced from.
+    operations:
+      - createTemplateStyleVersion
+      - retrieveTemplateStyleVersion
+      - retrieveTemplateStyleVersionEditableSpec
+  - name: Mapping
+    description: >-
+      A mapping binds concrete input values (text, images, videos, audio, fonts)
+      to a TemplateStyleVersion's editable spec — i.e. the data that fills a
+      template to produce a specific video.
+    operations:
+      - createMapping
+      - retrieveMapping
+      - updateMapping
+  - name: RenderSession
+    description: >-
+      A render job that produces the final video from a Mapping + template.
+      Referenced by webhooks and by the Editor SDK (render_session_id) and yields
+      the delivered/download asset.
+    operations:
+      - createRenderSession
+      - retrieveRenderSession
+relationships:
+  - from: Mapping
+    to: TemplateStyleVersion
+    type: belongs_to
+    via: template_style_version
+    evidence: A Mapping fills a specific TemplateStyleVersion's editable spec.
+  - from: RenderSession
+    to: Mapping
+    type: belongs_to
+    via: mapping
+    evidence: A RenderSession renders a Mapping into a video.
+  - from: RenderSession
+    to: TemplateStyleVersion
+    type: belongs_to
+    via: template_style_version
+    evidence: A render is produced against a template style version.
+notes: >-
+  Derived from the published API reference resource groups (Mapping,
+  RenderSession, TemplateStyleVersion) and terminology docs. Shakr does not
+  publish an OpenAPI spec or documented id-prefixes; relationship directions
+  reflect the documented create-flow (template -> mapping -> render session).

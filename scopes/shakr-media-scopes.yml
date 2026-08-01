@@ -1,0 +1,38 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.shakr.com/api/retrieve-an-access-token/
+docs: https://developers.shakr.com/docs/api/authentication/
+schemes:
+  - name: OAuth2ClientCredentials
+    flow: clientCredentials
+    tokenHost: https://api.shakr.com
+    source: docs
+convention:
+  format: "resource[:action][:target]"
+  description: >-
+    The optional `scope` parameter on the token request restricts the actions a
+    token can perform. Scope strings are comma-separated and follow the
+    resource[:action][:target] convention. `action` is read or write; `target`
+    optionally narrows the scope to a single resource id (e.g.
+    template_style_version:write:Zx1A grants write on one TemplateStyleVersion).
+  example: "template_style_version:write:Zx1A"
+resources: [template_style_version, mapping, render_session]
+actions: [read, write]
+scopes:
+  - scope: "template_style_version:read"
+    description: Read access to TemplateStyleVersion resources.
+  - scope: "template_style_version:write"
+    description: Write access to TemplateStyleVersion resources.
+  - scope: "mapping:read"
+    description: Read access to Mapping resources.
+  - scope: "mapping:write"
+    description: Write access to Mapping resources.
+  - scope: "render_session:read"
+    description: Read access to RenderSession resources.
+  - scope: "render_session:write"
+    description: Write access to RenderSession resources.
+notes: >-
+  Scopes above are documented convention examples derived from the published
+  resource[:action][:target] grammar and the three API resources (Mapping,
+  RenderSession, TemplateStyleVersion). Shakr does not publish a fixed
+  enumerated scope list; tokens may also be minted un-scoped for full access.

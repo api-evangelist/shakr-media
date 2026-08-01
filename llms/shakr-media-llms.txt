@@ -1,0 +1,38 @@
+# Shakr Media
+
+> Shakr is a video creation platform that lets businesses produce and automate video at scale. The Shakr Video API (v2) provides programmatic end-to-end video production — build a creative template, map input content onto it, render, and auto-deliver to destinations like Amazon S3, Azure Blob Storage, and Facebook Ad Accounts. The Shakr Video Editor SDK embeds a white-labeled drag-and-drop video editor directly inside a customer's product. Authentication is OAuth 2.0 Client Credentials with bearer tokens. Shakr is a 500 Global portfolio company.
+
+## APIs
+
+- [Shakr Video API (v2)](https://developers.shakr.com/docs/api/introduction/): REST API for programmatic video creation. Base URL https://api.shakr.com/v2/. Resources: TemplateStyleVersion, Mapping, RenderSession.
+- [Shakr Video Editor SDK](https://developers.shakr.com/docs/editor-sdk/introduction/): Embeddable white-label drag-and-drop video editor (npm @shakrmedia/editor-sdk).
+
+## Docs
+
+- [API Introduction](https://developers.shakr.com/docs/api/introduction/): Base URL, headers, auth overview.
+- [Authentication and Access Token](https://developers.shakr.com/docs/api/authentication/): OAuth 2.0 Client Credentials Grant.
+- [Build a Mapping](https://developers.shakr.com/docs/api/guides/build-a-mapping/introduction/): Text/color, image, video, audio, font editables.
+- [Automated Video Delivery](https://developers.shakr.com/docs/api/guides/automated-video-delivery/introduction/): S3, Azure Blob, Facebook Ad Account.
+- [Webhooks](https://developers.shakr.com/docs/api/guides/automated-video-delivery/webhooks/): POST notifications on completed delivery.
+- [Editor SDK Installation](https://developers.shakr.com/docs/editor-sdk/installation/): npm / script-tag integration.
+
+## Reference
+
+- [API Reference](https://developers.shakr.com/api/): Mapping, RenderSession, TemplateStyleVersion, Authorization endpoints.
+- [SDK Reference](https://developers.shakr.com/editor-sdk/): Editor SDK TypeScript API.
+
+## Packages
+
+- [@shakrmedia/editor-sdk (npm)](https://www.npmjs.com/package/@shakrmedia/editor-sdk): Video Editor SDK.
+- [GitHub org](https://github.com/shakrmedia): 33 public repos incl. editor-sdk-demo, preview-api-demo, facebookbusiness-shakr.
+
+## Enrichment artifacts (API Evangelist)
+
+- authentication/shakr-media-authentication.yml — OAuth2 client-credentials + bearer profile.
+- scopes/shakr-media-scopes.yml — resource:action:target scope convention.
+- conventions/shakr-media-conventions.yml — cross-cutting request/response semantics.
+- asyncapi/shakr-media-webhooks.yml — webhook event catalog.
+- packages/shakr-media-packages.yml — first-party client libraries.
+- components/shakr-media-components.yml — embeddable Editor SDK.
+- data-model/shakr-media-data-model.yml — entity-relationship graph.
+- mcp/shakr-media-mcp.yml — candidate MCP tool list.

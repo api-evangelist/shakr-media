@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.shakr.com/docs/api/authentication/
+docs: https://developers.shakr.com/docs/api/authentication/
+summary:
+  types: [oauth2, http]
+  api_key_in: []
+  oauth2_flows: [clientCredentials]
+  bearer: true
+notes: >-
+  The Shakr Video API uses the OAuth 2.0 Client Credentials Grant for
+  service-to-service authentication (no end-user account). Callers exchange a
+  client_id + client_secret (grant_type=client_credentials, optional scope) at
+  the token host for an access_token, then send it as an HTTP bearer token on
+  every request. Access tokens can be scope-restricted using the
+  resource[:action][:target] convention (see scopes/).
+schemes:
+  - name: OAuth2ClientCredentials
+    type: oauth2
+    flow: clientCredentials
+    token_host: https://api.shakr.com
+    grant_type: client_credentials
+    params: [client_id, client_secret, grant_type, scope]
+    source: docs
+  - name: bearerAuth
+    type: http
+    scheme: bearer
+    in: header
+    header: Authorization
+    format: "Bearer <ACCESS_TOKEN>"
+    source: docs

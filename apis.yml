@@ -1,8 +1,30 @@
 aid: shakr-media
 name: Shakr Media
-description: Shakr Media is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Shakr is a video creation platform that helps businesses produce and automate
+  video at scale. The Shakr Video API (v2) offers programmatic end-to-end video
+  production: create a versioned creative template (TemplateStyleVersion), map
+  input content (text, images, video, audio, fonts) onto its editable spec, kick
+  off a render session, and automatically deliver the finished video to
+  destinations such as Amazon S3, Microsoft Azure Blob Storage, and Facebook Ad
+  Accounts — with completion webhooks. The Shakr Video Editor SDK embeds a
+  white-labeled drag-and-drop video editor directly inside a customer's product.
+  Authentication uses the OAuth 2.0 Client Credentials Grant with scoped bearer
+  tokens. Shakr is a 500 Global portfolio company.
 url: https://raw.githubusercontent.com/api-evangelist/shakr-media/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/shakrmedia
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,10 +33,40 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Video
+- Video Creation
+- Video Editing
+- Video API
+- Media
+- SDK
+- Automation
+- Advertising
+- White Label
+apis:
+- name: Shakr Video API
+  description: >-
+    REST API for programmatic, end-to-end video creation and automated delivery.
+    OAuth 2.0 client-credentials + bearer auth. Resources: TemplateStyleVersion,
+    Mapping, RenderSession.
+  humanURL: https://developers.shakr.com/docs/api/introduction/
+  baseURL: https://api.shakr.com/v2/
+  tags:
+  - Video API
+  - Video Creation
+  - Automation
+- name: Shakr Video Editor SDK
+  description: >-
+    Embeddable, white-labeled drag-and-drop video editor for the browser
+    (npm @shakrmedia/editor-sdk).
+  humanURL: https://developers.shakr.com/docs/editor-sdk/introduction/
+  baseURL: https://developers.shakr.com/editor-sdk/
+  tags:
+  - SDK
+  - Video Editing
+  - White Label
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +75,44 @@ maintainers:
 common:
 - type: Website
   url: https://shakr.com
+- type: DeveloperPortal
+  url: https://developers.shakr.com
+- type: Documentation
+  url: https://developers.shakr.com/docs/
+- type: APIReference
+  url: https://developers.shakr.com/api/
+- type: GettingStarted
+  url: https://developers.shakr.com/docs/quickstart/getting-server-token/
+- type: GitHubOrganization
+  url: https://github.com/shakrmedia
+- type: Authentication
+  url: authentication/shakr-media-authentication.yml
+- type: OAuthScopes
+  url: scopes/shakr-media-scopes.yml
+- type: Conventions
+  url: conventions/shakr-media-conventions.yml
+- type: Webhooks
+  url: asyncapi/shakr-media-webhooks.yml
+- type: Packages
+  url: packages/shakr-media-packages.yml
+- type: SDKs
+  url: packages/shakr-media-packages.yml
+- type: Components
+  url: components/shakr-media-components.yml
+- type: DataModel
+  url: data-model/shakr-media-data-model.yml
+- type: MCPServer
+  url: mcp/shakr-media-mcp.yml
+- type: LLMsTxt
+  url: llms/shakr-media-llms.txt
+- type: Lifecycle
+  url: lifecycle/shakr-media-lifecycle.yml
+- type: WellKnown
+  url: well-known/shakr-media-well-known.yml
+- type: DomainSecurity
+  url: security/shakr-media-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1

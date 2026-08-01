@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: searched
+source: https://developers.shakr.com/docs/api/guides/automated-video-delivery/webhooks/
+type: Webhooks
+docs: https://developers.shakr.com/docs/api/guides/automated-video-delivery/webhooks/
+summary: >-
+  Shakr sends a webhook (HTTP POST to a customer-registered endpoint) whenever an
+  external upload / automated video delivery finishes. Registration is manual:
+  the customer shares their receiving endpoint with Shakr's customer success team.
+  A single event fires per completed delivery, carrying the render session id and
+  the destination + remote id of the delivered asset.
+transport: http-webhook
+delivery_method: POST
+registration: manual (contact Shakr customer success)
+events:
+  - name: external_upload_finished
+    trigger: An automated video delivery to a configured destination completes.
+    method: POST
+    payload_fields:
+      - render_session_id: The RenderSession whose rendered video was delivered.
+      - to: Destination URI (e.g. s3://bucket/path/object.mp4, fbadact://act_123, azure blob).
+      - remote_id: The id/path of the created asset at the destination.
+    example_payloads:
+      facebook_ad_account:
+        render_session_id: RENDER_SESSION_ID
+        to: fbadact://act_123
+        remote_id: CREATED_FACEBOOK_ADVIDEO_ID
+      amazon_s3:
+        render_session_id: RENDER_SESSION_ID
+        to: s3://bucket/path/to/object.mp4
+        remote_id: path/to/object.mp4
+destinations:
+  - Amazon S3
+  - Microsoft Azure Blob Storage
+  - Facebook Ad Account
+spec_type: none
+notes: >-
+  Shakr documents a webhook surface but does not publish an AsyncAPI document.
+  Captured here as a webhook catalog (type Webhooks). No fabricated AsyncAPI spec.
