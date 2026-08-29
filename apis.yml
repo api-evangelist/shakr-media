@@ -12,6 +12,17 @@ description: >-
   Authentication uses the OAuth 2.0 Client Credentials Grant with scoped bearer
   tokens. Shakr is a 500 Global portfolio company.
 url: https://raw.githubusercontent.com/api-evangelist/shakr-media/refs/heads/main/apis.yml
+deliveryModel:
+  model: library
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Library · distributed through package registries, no callable service
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
