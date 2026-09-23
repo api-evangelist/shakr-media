@@ -1,11 +1,14 @@
 generated: '2026-07-21'
 method: searched
 host: https://api.shakr.com
-note: >-
-  Live probes of the Shakr API host. The host redirects (301/308) all
-  /.well-known/ paths rather than serving discovery documents, so no well-known
-  document was captured. Absence is valid recorded data.
-documents:
+note: Live probes of the Shakr API host. The host redirects (301/308) all /.well-known/ paths rather than
+  serving discovery documents, so no well-known document was captured. Absence is valid recorded data.
+also_probed:
+  host: https://shakr.com
+  note: shakr.com/.well-known/security.txt returned 400 (Cloudflare); no security.txt served.
+hosts:
+- host: https://api.shakr.com
+  documents:
   - path: /.well-known/security.txt
     status: 301
   - path: /.well-known/openid-configuration
@@ -16,6 +19,8 @@ documents:
     status: 308
   - path: /.well-known/ai-plugin.json
     status: 301
-also_probed:
-  host: https://shakr.com
-  note: shakr.com/.well-known/security.txt returned 400 (Cloudflare); no security.txt served.
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
