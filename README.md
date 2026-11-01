@@ -64,6 +64,107 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Shakr Media is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Shakr is a video creation platform that helps businesses produce and automate video at scale. The Shakr Video API (v2) offers programmatic end-to-end video production: create a versioned creative template (TemplateStyleVersion), map input content (text, images, video, audio, fonts) onto its editable spec, kick off a render session, and automatically deliver the finished video to destinations such as Amazon S3, Microsoft Azure Blob Storage, and Facebook Ad Accounts — with completion webhooks. The Shakr Video Editor SDK embeds a white-labeled drag-and-drop video editor directly inside a customer's product. Authentication uses the OAuth 2.0 Client Credentials Grant with scoped bearer tokens. Shakr is a 500 Global portfolio company.
 
-Backed by: 500-global — https://shakr.com
+**Areas:** Company · Video · Video Creation · Video Editing · Video API · Media · SDK · Automation · Advertising · White Label
+
+## Shakr Media on APIs.io
+
+Everything profiled for Shakr Media is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/shakr-media/](https://apis.io/providers/shakr-media/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Shakr Video API](https://apis.io/apis/shakr-media/shakr-video-api/) — REST API for programmatic, end-to-end video creation and automated delivery. OAuth 2.0 client-credentials + bearer auth. Resources: TemplateStyleVersion,…
+- [Shakr Video Editor SDK](https://apis.io/apis/shakr-media/shakr-video-editor-sdk/) — Embeddable, white-labeled drag-and-drop video editor for the browser (npm @shakrmedia/editor-sdk).
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Shakr Media Webhooks](https://apis.io/asyncapis/shakr-media/shakr-media-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [shakr](https://apis.io/servers/shakr-media/shakr/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Shakr Media Authentication](https://apis.io/security/shakr-media/shakr-media-authentication/)
+- [Shakr Media Domain Security](https://apis.io/security/shakr-media/shakr-media-domain-security/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Shakr Media Scopes](https://apis.io/scopes/shakr-media/shakr-media-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://shakr.com)
+- [Documentation](https://developers.shakr.com/docs/)
+- [Getting started](https://developers.shakr.com/docs/quickstart/getting-server-token/)
+- [API reference](https://developers.shakr.com/api/)
+- [GitHub](https://github.com/shakrmedia)
+
+## API Evangelist rating
+
+**Kin Score 25.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 39.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 0.0 |
+
+**Agent readiness 19.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 21.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/shakr-media/](https://apis.io/providers/shakr-media/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Shakr Media: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/shakr-media/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
